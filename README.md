@@ -25,7 +25,7 @@ The project prepares reporting-ready datasets for COVID-19 cases, deaths, hospit
 
 ## Architecture
 
-![Azure COVID reporting architecture](docs/images/architecture.svg)
+![Azure COVID reporting architecture](docs/architecture.png)
 
 The architecture separates orchestration, storage, transformation and serving concerns. Raw source files are preserved in the data lake, transformations write curated outputs to a separate processed layer, and the final relational tables are exposed through Azure SQL Database.
 
