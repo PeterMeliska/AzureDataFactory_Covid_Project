@@ -116,7 +116,8 @@ The current implementation uses a full-refresh pattern: each target table is tru
 | `pl_sqlize_testing_data` | Copy | Full-refresh load into the testing SQL table. |
 
 
-![Azure COVID reporting architecture](docs/data-factory.png)
+![Azure-Data-Factory](docs/data-factory.png)
+
 
 
 ## What this project demonstrates
