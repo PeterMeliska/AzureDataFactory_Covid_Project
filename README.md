@@ -115,41 +115,6 @@ The current implementation uses a full-refresh pattern: each target table is tru
 | `pl_sqlize_hospital_admissions_daily_data` | Copy | Full-refresh load into the daily hospital SQL table. |
 | `pl_sqlize_testing_data` | Copy | Full-refresh load into the testing SQL table. |
 
-### Trigger dependencies
-
-```mermaid
-flowchart TD
-    A["tr_ingest_ecdc_data<br/>24-hour tumbling window"] --> B["tr_process_cases_and_deaths_data"]
-    A --> C["tr_process_hospital_admissions_data"]
-    B --> D["tr_sqlize_cases_and_deaths_data"]
-    C --> E["tr_sqlize_hospital_admissions_data"]
-    F["tr_population_data_arrived<br/>BlobCreated event"] --> G["pl_execute_population_pl"]
-```
-
-The dependency graph prevents serving pipelines from starting before their transformations have completed successfully. The population workflow is independent and event-driven.
-
-## Repository structure
-
-```text
-AzureDataFactory_Covid_Project/
-├── README.md
-├── docs/
-│   └── images/
-│       ├── architecture.svg
-│       └── resource-group-overview.png
-└── adf-resourcer/
-    ├── factory/          # Data Factory definition and managed identity
-    ├── linkedService/    # HTTP, Blob, ADLS, Databricks and Azure SQL connections
-    ├── dataset/          # Source, lookup, processed and SQL datasets
-    ├── dataflow/         # Mapping Data Flow definitions
-    ├── pipeline/         # Ingest, process, execute and SQLize pipelines
-    ├── trigger/          # Tumbling Window and Blob Event triggers
-    └── publish_config.json
-```
-
-ADF is configured to use `main` as the collaboration branch and `adf_publish` as the publish branch. Publishing from ADF Studio creates or updates the deployment artifacts in the publish branch.
-
-
 
 ## What this project demonstrates
 
