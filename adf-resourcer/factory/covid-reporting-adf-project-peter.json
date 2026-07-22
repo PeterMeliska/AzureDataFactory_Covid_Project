@@ -1,0 +1,15 @@
+{
+	"name": "covid-reporting-adf-project-peter",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "germanywestcentral",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "77770308-3a9b-4618-afdb-48bd853f99c2",
+		"tenantId": "a6cddba0-f285-4aa1-8488-3cabd3d0fbb6"
+	}
+}
