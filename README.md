@@ -3,7 +3,7 @@
 [![Azure Data Factory](https://img.shields.io/badge/Azure_Data_Factory-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)](https://azure.microsoft.com/products/data-factory/)
 [![Azure Databricks](https://img.shields.io/badge/Azure_Databricks-FF3621?style=for-the-badge&logo=databricks&logoColor=white)](https://azure.microsoft.com/products/databricks/)
 [![Azure SQL](https://img.shields.io/badge/Azure_SQL-0078D4?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)](https://azure.microsoft.com/products/azure-sql/)
-[![Portfolio Project](https://img.shields.io/badge/Project-Data_Engineering_Portfolio-2EA44F?style=for-the-badge)](https://github.com/PeterMeliska)
+
 
 An end-to-end Azure data engineering project that orchestrates the ingestion, validation, transformation and serving of European COVID-19 data. The solution uses Azure Data Factory as the orchestration layer, Azure Data Lake Storage Gen2 for layered storage, Mapping Data Flows and Azure Databricks for transformation, and Azure SQL Database as the reporting layer.
 
@@ -114,6 +114,7 @@ The current implementation uses a full-refresh pattern: each target table is tru
 | `pl_sqlize_cases_deaths` | Copy | Full-refresh load into the cases/deaths SQL table. |
 | `pl_sqlize_hospital_admissions_daily_data` | Copy | Full-refresh load into the daily hospital SQL table. |
 | `pl_sqlize_testing_data` | Copy | Full-refresh load into the testing SQL table. |
+
 
 ![Azure COVID reporting architecture](docs/data-factory.png)
 
