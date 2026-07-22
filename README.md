@@ -33,7 +33,7 @@ The architecture separates orchestration, storage, transformation and serving co
 
 The regional services are deployed in **Germany West Central**; the metric alert rule and action group are global Azure resources. The environment includes the core data platform, identity and monitoring resources shown below.
 
-![Azure resource group](docs/resource-group-overview.png)
+![Azure resource group](docs/resource-group.png)
 
 ## Azure services
 
