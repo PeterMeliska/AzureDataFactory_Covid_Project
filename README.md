@@ -145,4 +145,12 @@ This project provides practical experience with:
 - Lookup files, the population input and the ECDC configuration file must be supplied separately.
 - Environment-specific resource IDs, service endpoints and credentials must be updated before deployment to another subscription.
 
+## Future improvement: CI/CD
+
+A potential CI/CD implementation for promoting ADF changes across development, test and production environments is documented in:
+
+➡️ [Future CI/CD implementation](docs/future-cicd/README.md)
+
+The proposed approach is based on a separate Azure DevOps hands-on exercise and is not currently implemented in this project.
+
 
