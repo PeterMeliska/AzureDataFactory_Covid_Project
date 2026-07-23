@@ -7,4 +7,4 @@ As a separate hands-on exercise, I explored two CI/CD approaches for deploying A
 
 This exercise demonstrates branch-based development, environment separation and controlled deployment. It is documented as a potential future extension and is not currently integrated into this project.
 
-[CI/CD using ADF Publish](future-cicd/CICD-Option1.png)
+[CI/CD using ADF Publish](CICD-Option1.png)
